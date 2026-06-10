@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-label="Pastel cat">
+  <defs>
+    <linearGradient id="body" x1="70" x2="250" y1="45" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CBE6B3"/>
+      <stop offset="1" stop-color="#91B875"/>
+    </linearGradient>
+    <linearGradient id="lilac" x1="105" x2="215" y1="80" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFE8FF"/>
+      <stop offset="1" stop-color="#C7B5E8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#668155" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <ellipse cx="160" cy="226" rx="94" ry="14" fill="#789A60" opacity=".16"/>
+  <path d="M91 170c-52-18-62-63-31-84 27-18 52 0 55 22" fill="none" stroke="#89AA70" stroke-width="26" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <ellipse cx="160" cy="162" rx="78" ry="60" fill="url(#body)" stroke="#789A60" stroke-width="5"/>
+    <path d="M106 110 128 46l27 70Z" fill="#B6D99A" stroke="#789A60" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M166 116 193 46l22 64Z" fill="#B6D99A" stroke="#789A60" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="160" cy="119" rx="66" ry="50" fill="#D9EFC8" stroke="#789A60" stroke-width="4"/>
+    <ellipse cx="134" cy="114" rx="9" ry="13" fill="#2F3D27"/>
+    <ellipse cx="186" cy="114" rx="9" ry="13" fill="#2F3D27"/>
+    <circle cx="138" cy="109" r="3" fill="#fff"/>
+    <circle cx="190" cy="109" r="3" fill="#fff"/>
+    <ellipse cx="160" cy="137" rx="7" ry="5" fill="url(#lilac)"/>
+    <path d="M160 142c-4 8-13 10-18 4m18-4c4 8 13 10 18 4" fill="none" stroke="#536844" stroke-width="4" stroke-linecap="round"/>
+    <path d="M129 136 92 127m37 17-35 9m97-17 37-9m-37 17 35 9" stroke="#789A60" stroke-width="3" stroke-linecap="round" opacity=".78"/>
+  </g>
+  <g opacity=".82">
+    <circle cx="83" cy="50" r="7" fill="#C7B5E8"/>
+    <circle cx="66" cy="64" r="5" fill="#A9CF88"/>
+    <circle cx="244" cy="62" r="6" fill="#C7B5E8"/>
+    <circle cx="260" cy="79" r="4" fill="#A9CF88"/>
+  </g>
+</svg>
