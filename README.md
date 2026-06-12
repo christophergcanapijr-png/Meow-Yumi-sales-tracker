@@ -28,7 +28,7 @@ Default config (`config.php`):
 
 ## Default Login
 
-- Admin: `Main Admin`
+- Admin: `Mainadmin`
 - Password: `admin123`
 
 Use **Add Admin** on the login page to create more admin profiles. The new admin card appears right after saving.
