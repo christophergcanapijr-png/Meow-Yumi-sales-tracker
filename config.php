@@ -5,6 +5,6 @@ return [
     'port' => (int) (getenv('DB_PORT') ?: 3306),
     'name' => getenv('DB_NAME') ?: 'reseller_tracker',
     'user' => getenv('DB_USER') ?: 'root',
-    'pass' => getenv('DB_PASS') ?: '',
+    'pass' => getenv('DB_PASS') ?: '', // LOCAL - do not change
     'charset' => 'utf8mb4',
 ];

@@ -29,7 +29,7 @@ try {
         $error = 'Invalid username or password.';
     }
 } catch (Throwable $e) {
-    $error = 'Database connection failed. Start MySQL in Laragon.';
+    $error = 'Database connection failed: ' . $e->getMessage();
 }
 ?>
 <!doctype html>
@@ -38,7 +38,7 @@ try {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login | Maeyumi Prems</title>
-    <link rel="stylesheet" href="assets/style.css?v=app-3">
+    <link rel="stylesheet" href="assets/style.css?v=app-27">
 </head>
 <body class="login-page">
     <main class="login-wrap">
@@ -47,7 +47,7 @@ try {
             <h1>Welcome back</h1>
             <p class="muted">Sign in to manage your shop.</p>
 
-            <?php if ($error): ?><div class="flash"><?= e($error) ?></div><?php endif; ?>
+            <?php if ($error): ?><div class="flash" data-toast-source data-toast-type="<?= e(toast_type($error)) ?>" hidden><?= e($error) ?></div><?php endif; ?>
 
             <form method="post" class="form">
                 <label>Username
@@ -60,5 +60,6 @@ try {
             </form>
         </section>
     </main>
+    <script src="assets/app.js?v=app-15"></script>
 </body>
 </html>

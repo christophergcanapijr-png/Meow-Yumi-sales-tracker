@@ -1,8 +1,3 @@
-CREATE DATABASE IF NOT EXISTS reseller_tracker
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-
-USE reseller_tracker;
 
 CREATE TABLE IF NOT EXISTS admins (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -11,11 +6,15 @@ CREATE TABLE IF NOT EXISTS admins (
   role VARCHAR(60) NOT NULL DEFAULT 'Admin',
   password_hash VARCHAR(255) NOT NULL,
   avatar_color VARCHAR(20) NOT NULL DEFAULT '#a9cf88',
+  profile_image VARCHAR(255) NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS inventory_items (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  product_name VARCHAR(120) NULL,
+  variant_type VARCHAR(80) NULL,
+  variant_subtype VARCHAR(120) NULL,
   name VARCHAR(120) NOT NULL,
   category VARCHAR(80) NOT NULL,
   stock INT NOT NULL DEFAULT 0,
@@ -46,9 +45,15 @@ CREATE TABLE IF NOT EXISTS inventory_item_slots (
 
 CREATE TABLE IF NOT EXISTS sales_records (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  item_id INT UNSIGNED NULL,
   item_name VARCHAR(120) NOT NULL,
   quantity INT NOT NULL DEFAULT 1,
   total_amount DECIMAL(10,2) NOT NULL DEFAULT 0,
+  sold_by_admin_id INT UNSIGNED NULL,
+  sold_by_name VARCHAR(120) NULL,
+  commission_units INT NOT NULL DEFAULT 0,
+  commission_rate DECIMAL(5,2) NOT NULL DEFAULT 0,
+  commission_amount DECIMAL(10,2) NOT NULL DEFAULT 0,
   sold_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
